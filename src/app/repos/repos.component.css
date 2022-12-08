@@ -1,0 +1,18 @@
+.repo_container{
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    padding-bottom: 120px;
+    padding-top: 120px;
+}
+
+@media only screen and (max-width : 600px) {
+    .repo_container{
+        padding: 10px 10px ;
+        padding-bottom: 120px;
+        padding-top: 120px;
+    }
+}                                                                            

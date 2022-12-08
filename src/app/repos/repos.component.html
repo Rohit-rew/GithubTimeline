@@ -1,3 +1,7 @@
-<div class="min-h-screen">
-    <button (click)="getRepoUrl()" >Click me</button>
+<div class="min-h-screen repo_container">
+ 
+    <ng-container *ngFor="let item of repoArray">
+        <app-repo [repo]="item"></app-repo>
+    </ng-container>
+
 </div>

@@ -2,6 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environment/environment';
 import { RepoService } from '../services/repo.service';
 
+export type Repo = {
+  id : number,
+  name : string,
+  fullName : string,
+  htmlUrl : string,
+  description : string,
+  url : string,
+  created_at : string,
+  clone_url : string,
+  language : string,
+}
+
 @Component({
   selector: 'app-repos',
   templateUrl: './repos.component.html',
@@ -11,6 +23,7 @@ import { RepoService } from '../services/repo.service';
 export class ReposComponent implements OnInit {
 
   repoUrl : string = ''
+  repoArray : Repo[] = []
 
   constructor(private repoService : RepoService){}
   
@@ -21,7 +34,7 @@ export class ReposComponent implements OnInit {
         "Authorization" : `Bearer ${environment.token}`
       }})
       const repos_res = await repos.json()
-      console.log(repos_res)
+      this.repoArray = repos_res
     } catch (error) {
       console.log(error)
     }
@@ -37,3 +50,8 @@ export class ReposComponent implements OnInit {
   }
 
 }
+
+
+
+
+

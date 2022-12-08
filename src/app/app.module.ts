@@ -12,6 +12,7 @@ import { InputComponent } from '../components/input/input.component';
 import { UserComponent } from '../components/user/user.component';
 import { ReposComponent } from './repos/repos.component';
 import { HomeComponent } from './home/home.component';
+import { RepoComponent } from '../components/repo/repo.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HomeComponent } from './home/home.component';
     UserComponent,
     FooterComponent,
     ReposComponent,
-    HomeComponent
+    HomeComponent,
+    RepoComponent
   ],
   imports: [
     BrowserModule,FormsModule,RouterModule.forRoot(appRoutes) ,FontAwesomeModule
