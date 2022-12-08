@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: #f45b69;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    color: white;
+    font-size: 60px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.line{
+    background-color: white;
+    width: 100px;
+    color: white;
+    height: 6px;
+}
+
+@media only screen and (max-width : 600px) {
+    header{
+        font-size: 40px;
+    }
+}
+@media only screen and (max-width : 350px) {
+    header{
+        font-size: 30px;
+    }
+}
