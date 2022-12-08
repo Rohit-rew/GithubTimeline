@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+@tailwind base;
+@tailwind component;
+@tailwind utilities;
+
+@tailwind "tailwind/base";
+@tailwind "tailwind/component";
+@tailwind "tailwind/utilities";
+
+
+body{
+    background-color: #456990;
+}
