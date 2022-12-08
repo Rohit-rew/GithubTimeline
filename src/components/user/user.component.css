@@ -42,32 +42,57 @@ img{
     .container{
         width: 600px;
     }   
+    
+    h2{
+        font-size: 2rem;
+    }
 }
 @media only screen and ( max-width : 650px) {
     .container{
         width: 550px;
     }   
+
+    h2{
+        font-size: 1.8rem;
+    }
+
 }
 @media only screen and ( max-width : 600px) {
     .container{
         width: 500px;
     }   
+
+    h2{
+        font-size: 1.6rem;
+    }
 }
 @media only screen and ( max-width : 550px) {
     .container{
         width: 450px;
         aspect-ratio: 6/1.5;
     }   
+
+    h2{
+        font-size: 1.4rem;
+    }
 }
 @media only screen and ( max-width : 500px) {
     .container{
         width: 400px;
         aspect-ratio: 6/1.5;
     }   
+
+    h2{
+        font-size: 1.2rem;
+    }
 }
 @media only screen and ( max-width : 450px) {
     .container{
         width: 350px;
         aspect-ratio: 6/1.5;
     }   
+
+    h2{
+        font-size: 1rem;
+    }
 }
