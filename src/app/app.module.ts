@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { InputComponent } from './input/input.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    InputComponent
+    InputComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,FormsModule,FontAwesomeModule,FormsModule

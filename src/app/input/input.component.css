@@ -1,5 +1,5 @@
 .container{
-    padding: 100px;
+    padding: 100px 50px;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -12,6 +12,7 @@ input{
     padding : 2px 5px;
     font-size: 30px;
     width: 600px;
+    outline-color: #f45b69;
 }
 
 input::placeholder{

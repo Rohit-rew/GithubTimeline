@@ -1,24 +1,37 @@
-import { AfterContentChecked, AfterViewChecked, Component, OnInit } from '@angular/core';
+import {  Component } from '@angular/core';
+import { environment } from 'src/environment/environment.prod';
+
+export type user = {
+  avatar_url : string,
+  html_url : string,
+  login : string,
+  id : number,
+  repos_url : string,
+  url : string,
+}
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
 
-  userName : string = ''
+  usersArray : user[] = []
 
-  async fetch(username : string) : Promise<void> {
-    const user = await  fetch(`https://api.github.com/repos/Rohit-rew/Portfolio/commits` , {headers : {
-      "Authorization" : `Bearer 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`
+  async fetch(userName : string) : Promise<void> {
+    console.log(userName)
+    const users = await fetch(`https://api.github.com/search/users?q=${userName}` , {headers : {
+      "Authorization" : `Bearer ${environment.token}`
     }})
-    const user_res = await user.json()
-    console.log(user_res)
+    const users_res = await users.json()
+    this.usersArray = users_res.items
+    console.log(users_res)
   }
-
-  search(userName : string){
-    this.userName = userName;
+ 
+  search(userName : string){ 
+    this.fetch(userName);
   }
 
 }

@@ -3,8 +3,14 @@
 
 <div class="min-h-screen">
   <app-input (userNameEvent)="search($event)"></app-input>
+  <div class="user_container">
+
+    <ng-container *ngFor="let item of usersArray">
+      <app-user [user]="item"></app-user>
+    </ng-container>
+  </div>
 </div>
 
-<app-footer></app-footer>
 
+<app-footer></app-footer>
 
