@@ -2,24 +2,29 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import { RouterModule } from '@angular/router';
+import appRoutes from './routerConfig';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { InputComponent } from './input/input.component';
-import { UserComponent } from './user/user.component';
+import { HeaderComponent } from '../components/header/header.component';
+import { FooterComponent } from '../components/footer/footer.component';
+import { InputComponent } from '../components/input/input.component';
+import { UserComponent } from '../components/user/user.component';
+import { ReposComponent } from './repos/repos.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
     InputComponent,
-    UserComponent
+    UserComponent,
+    FooterComponent,
+    ReposComponent,
+    HomeComponent
   ],
   imports: [
-    BrowserModule,FormsModule,FontAwesomeModule,FormsModule
+    BrowserModule,FormsModule,RouterModule.forRoot(appRoutes) ,FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
