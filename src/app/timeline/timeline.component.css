@@ -3,6 +3,16 @@
 }
 
 .timeline_container{
-    height : 20vh;
-    background-color:red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* .timeline_container:nth-child(odd) div{
+    background-color: blueviolet;
+} */
+
+.timeline_container div:nth-child(odd){
+    background-color: aqua;
 }

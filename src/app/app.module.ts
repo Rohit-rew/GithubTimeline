@@ -14,6 +14,7 @@ import { ReposComponent } from './repos/repos.component';
 import { HomeComponent } from './home/home.component';
 import { RepoComponent } from '../components/repo/repo.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { CommitComponent } from '../components/commit/commit.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { TimelineComponent } from './timeline/timeline.component';
     ReposComponent,
     HomeComponent,
     RepoComponent,
-    TimelineComponent
+    TimelineComponent,
+    CommitComponent
   ],
   imports: [
     BrowserModule,FormsModule,RouterModule.forRoot(appRoutes) ,FontAwesomeModule

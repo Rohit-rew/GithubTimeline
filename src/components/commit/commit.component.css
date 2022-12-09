@@ -1,0 +1,57 @@
+.container{
+    /* background-color: aqua; */
+    width: 600px;
+    /* height: 35vh; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+
+.visuals{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical_line{
+    width: 5px;
+    height: 100%;
+    background-color: white;
+}
+
+.circle{
+    background-color: #f45b69;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.commit_msg{
+    width: 50%;
+    height: 150px;
+    background-color: #f45b69;
+    align-self:flex-end;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    position: relative;
+}
+
+
+.commit_msg::before{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 6px;
+    left: -20px;
+    border-top: 12px solid transparent;
+    border-left: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-right:12px solid #f45b69;
+}
