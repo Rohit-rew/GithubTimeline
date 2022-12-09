@@ -9,10 +9,6 @@
     flex-direction: column;
 }
 
-/* .timeline_container:nth-child(odd) div{
-    background-color: blueviolet;
-} */
-
-.timeline_container div:nth-child(odd){
+.timeline_container .container:nth-child(odd) .commit_msg{
     background-color: aqua;
 }

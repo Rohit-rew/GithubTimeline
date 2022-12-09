@@ -42,6 +42,10 @@
     position: relative;
 }
 
+h2{
+    font-weight: 600;
+}
+
 
 .commit_msg::before{
     content: "";

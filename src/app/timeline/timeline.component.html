@@ -1,7 +1,8 @@
 <div class="min-h-screen container">
     <div class="timeline_container">
-        <app-commit></app-commit>
-        <app-commit></app-commit>
-        <app-commit></app-commit>
+
+        <ng-container *ngFor="let item of commitArray">
+            <app-commit [commit]="item"></app-commit>
+        </ng-container>
     </div>
 </div>

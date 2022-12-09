@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environment/environment';
 import { TimelineService } from '../services/timeline.service';
 
-type commit = {
+export type commit = {
   sha : string,
   node_id : string,
   url : string ,
