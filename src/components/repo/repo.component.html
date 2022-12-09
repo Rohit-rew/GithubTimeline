@@ -1,14 +1,20 @@
-<a>
-    <div class="container ">
-
-        <div class="flex gap-5">
-            <h2>{{repo.name}}</h2>
-        </div>
-
-        <div class="buttons">
-            <a href="#" target="_blank">
-                <div class="button">Clone</div>
-            </a>
-        </div>
+<a routerLink="/repos/timeline" (click)="setTimelineLink(repo.url)"> 
+  <div class="container">
+    <div class="flex gap-5">
+      <h2>{{ repo.name }}</h2>
+      <div class="flex flex-col justify-center">
+        <p>Created at {{ repo.created_at.substring(0, 10) }}</p>
+        <p>Language : {{ repo.language }}</p>
+      </div>
     </div>
+    <div class="buttons">
+      <div (click)="copyToClipBoard(repo.clone_url)" class="button">
+        Copy Clone URL
+      </div>
+      <a href="{{ repo.htmlUrl }}" target="_blank">
+        <div class="button">GitHub</div>
+      </a>
+    </div>
+    <div *ngIf="isCopied" class="flash_message">Copied To Clipboard</div>
+  </div>
 </a>

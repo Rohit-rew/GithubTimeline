@@ -12,7 +12,11 @@ export class InputComponent {
   userName : string = ''
   @Output() userNameEvent = new EventEmitter<string>()
 
-  search(userName : string){
+  searchEnter(event : KeyboardEvent , userName : string){
+    if(event.key!="Enter") return;
+    this.userNameEvent.emit(userName)
+  }
+  searchClick(userName : string){
     this.userNameEvent.emit(userName)
   }
 

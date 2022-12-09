@@ -1,17 +1,11 @@
-
-let repoLink : string = ""
+let reposLink: string = '';
 
 export class RepoService {
+  setRepoUrl = (repoUrl: string): void => {
+    reposLink = repoUrl;
+  };
 
-    
-
-    setRepoUrl = (repoUrl :string):void =>{
-        repoLink = repoUrl;
-    }
-    
-    getRepoUrl = ():string => {
-        console.log(repoLink)
-        return repoLink
-    }
-
+  getRepoUrl = (): string => {
+    return reposLink;
+  };
 }

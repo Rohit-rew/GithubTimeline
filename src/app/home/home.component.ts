@@ -21,13 +21,11 @@ export class HomeComponent {
   usersArray : user[] = []
 
   async fetch(userName : string) : Promise<void> {
-    console.log(userName)
     const users = await fetch(`https://api.github.com/search/users?q=${userName}` , {headers : {
       "Authorization" : `Bearer ${environment.token}`
     }})
     const users_res = await users.json()
     this.usersArray = users_res.items
-    console.log(users_res)
   }
  
   search(userName : string){ 

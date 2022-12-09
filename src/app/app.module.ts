@@ -13,6 +13,7 @@ import { UserComponent } from '../components/user/user.component';
 import { ReposComponent } from './repos/repos.component';
 import { HomeComponent } from './home/home.component';
 import { RepoComponent } from '../components/repo/repo.component';
+import { TimelineComponent } from './timeline/timeline.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { RepoComponent } from '../components/repo/repo.component';
     FooterComponent,
     ReposComponent,
     HomeComponent,
-    RepoComponent
+    RepoComponent,
+    TimelineComponent
   ],
   imports: [
     BrowserModule,FormsModule,RouterModule.forRoot(appRoutes) ,FontAwesomeModule

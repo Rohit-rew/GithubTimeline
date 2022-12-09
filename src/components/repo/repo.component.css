@@ -8,6 +8,7 @@
     box-sizing: border-box;
     gap: 15px;
     justify-content: space-between;
+    position: relative;
 }
 
 h2{
@@ -27,6 +28,7 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 .button{
@@ -34,6 +36,7 @@ img{
     color: white;
     border-radius: 5px;
     padding: 5px 10px;
+    cursor: pointer;
 }
 
 
@@ -95,4 +98,15 @@ img{
     h2{
         font-size: 1rem;
     }
+}
+
+.flash_message{
+    background-color: white;
+    border: 1px solid white;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.089);
+    padding: 3px;
+    position: absolute;
+    border-radius: 5px;
+    top: 5px;
+    right: 5px;
 }
