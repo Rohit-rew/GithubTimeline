@@ -1,16 +1,13 @@
+<div class="container">
+  <div class="visuals">
+      <div class="circle"></div>
+    <div class="vertical_line"></div>
+  </div>
 
-    <div class="container">
-        <div class="visuals">
-            <div class="vertical_line">
-            </div>
-            <div class="circle">
-            </div>
-        </div>
+  <div class="commit_msg">
+    <h2>{{ date }}</h2>
+    <h2>{{ time }}</h2>
 
-        <div class="commit_msg">
-            <h2>{{date}}</h2>
-            <h2>{{time}}</h2>
-
-            <p>{{commit.commit.message}}</p>
-        </div>
-    </div>
+    <p>{{ commit.commit.message }}</p>
+  </div>
+</div>

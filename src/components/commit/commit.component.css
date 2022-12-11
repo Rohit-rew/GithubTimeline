@@ -1,7 +1,5 @@
 .container{
-    /* background-color: aqua; */
     width: 600px;
-    /* height: 35vh; */
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -33,13 +31,14 @@
     width: 50%;
     /* height: 150px; */
     background-color: #f45b69;
-    align-self:flex-end;
+    align-self:flex-start;
     padding: 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     color: white;
     position: relative;
+
 }
 
 h2{
@@ -52,10 +51,48 @@ h2{
     width: 0;
     height: 0;
     position: absolute;
-    bottom: 6px;
+    top: 3px;
     left: -20px;
     border-top: 12px solid transparent;
     border-left: 12px solid transparent;
     border-bottom: 12px solid transparent;
     border-right:12px solid #f45b69;
+}
+
+@media only screen and (max-width : 650px) {
+    .visuals{
+        height: 150px;
+    }
+
+    .circle{
+        width: 20px;
+        height: 20px;
+    }
+
+    .vertical_line{
+        width: 3px;
+    }
+
+    .commit_msg{
+        width: 60%;
+    }
+
+    h2{
+        font-size: 10px;
+    }
+
+    p{
+        font-size: 10px;
+    }
+
+    .container{
+        justify-content: center;
+        width: auto;
+        gap: 15px;
+    }
+
+    .commit_msg{
+        gap: 5px;
+        padding: 5px;
+    }
 }

@@ -9,6 +9,10 @@
     flex-direction: column;
 }
 
-.timeline_container .container:nth-child(odd) .commit_msg{
-    background-color: aqua;
+
+@media only screen and (max-width : 800px) {
+
+    .container{
+        padding: 100px;
+    }
 }

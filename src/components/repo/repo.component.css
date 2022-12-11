@@ -54,6 +54,10 @@ img{
     h2{
         font-size: 2rem;
     }
+
+    p{
+        font-size: 14px;
+    }
 }
 @media only screen and ( max-width : 650px) {
     .container{
@@ -72,6 +76,10 @@ img{
 
     h2{
         font-size: 1.6rem;
+    }
+
+    p{
+        font-size: 9px;
     }
 }
 @media only screen and ( max-width : 550px) {
@@ -92,6 +100,10 @@ img{
 
     h2{
         font-size: 1.2rem;
+    }
+
+    .button{
+        font-size: 12px;
     }
 }
 @media only screen and ( max-width : 450px) {
