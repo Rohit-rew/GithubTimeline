@@ -30,7 +30,6 @@ export class RepoComponent implements OnInit {
   copyToClipBoard(event : MouseEvent ,cloneUrl : string){
     event.stopPropagation()
     event.preventDefault()
-    console.log("copied")
     this.isCopied = true;
     navigator.clipboard.writeText(cloneUrl)
     setTimeout(()=>{

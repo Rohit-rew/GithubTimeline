@@ -31,7 +31,7 @@
 
 .commit_msg{
     width: 50%;
-    height: 150px;
+    /* height: 150px; */
     background-color: #f45b69;
     align-self:flex-end;
     padding: 10px;
