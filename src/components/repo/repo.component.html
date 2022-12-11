@@ -1,16 +1,14 @@
 <a routerLink="/repos/timeline" (click)="setTimelineLink(repo.url)"> 
   <div class="container">
-    <div class="flex gap-5">
-      <h2>{{ repo.name }}</h2>
-      <div class="flex flex-col justify-center">
-        <p>Created at {{ repo.created_at.substring(0, 10) }}</p>
+    <div class="flex flex-col items-start">
+      <h2>{{ (repo.name).slice(0 , 20) }}</h2>
+        <p>Created at : {{date}}</p>
         <p>Language : {{ repo.language }}</p>
-      </div>
     </div>
     <div class="buttons">
-      <div (click)="copyToClipBoard(repo.clone_url)" class="button">
-        Copy Clone URL
-      </div>
+        <div (click)="copyToClipBoard($event ,repo.clone_url)" class="button">
+          <fa-icon class="copy" [icon]="copy" ></fa-icon> Clone URL
+        </div>
       <a href="{{ repo.htmlUrl }}" target="_blank">
         <div class="button">GitHub</div>
       </a>

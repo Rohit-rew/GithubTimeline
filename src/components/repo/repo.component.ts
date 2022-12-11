@@ -1,6 +1,7 @@
-import { Component , Input } from '@angular/core';
+import { Component , Input, OnInit } from '@angular/core';
 import { Repo } from 'src/app/repos/repos.component';
 import { TimelineService } from 'src/app/services/timeline.service';
+import { faCopy } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-repo',
@@ -8,7 +9,7 @@ import { TimelineService } from 'src/app/services/timeline.service';
   styleUrls: ['./repo.component.css'],
   providers : [TimelineService]
 })
-export class RepoComponent {
+export class RepoComponent implements OnInit {
   @Input() repo :Repo = {id : 0,
     name : "Portfolio",
     fullName : "Rohit/Portfolio",
@@ -19,15 +20,17 @@ export class RepoComponent {
     clone_url : "asdasd",
     language : "Javascript",
   }
-
-  constructor(private timelineService : TimelineService){
-
-  }
-
+  date : string = ''
   isCopied : Boolean = false;
+  copy = faCopy;
+
+  constructor(private timelineService : TimelineService){}
 
   // triggered from html clone btn.
-  copyToClipBoard(cloneUrl : string){
+  copyToClipBoard(event : MouseEvent ,cloneUrl : string){
+    event.stopPropagation()
+    event.preventDefault()
+    console.log("copied")
     this.isCopied = true;
     navigator.clipboard.writeText(cloneUrl)
     setTimeout(()=>{
@@ -38,6 +41,10 @@ export class RepoComponent {
   // trigered from html anchor tag.
   setTimelineLink(timelineLink : string){
     this.timelineService.setTimelineLink(timelineLink);
+  }
+
+  ngOnInit(): void {
+    this.date = new Date(this.repo.created_at).toDateString()
   }
 
   

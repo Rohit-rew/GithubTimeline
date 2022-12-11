@@ -8,7 +8,7 @@
         </div>
 
         <div class="commit_msg">
-            <h2>{{(commit.commit.committer.date)}}</h2>
+            <h2>{{(commit.commit.committer.date).substring(0,10)}}</h2>
 
             <p>{{commit.commit.message}}</p>
         </div>
