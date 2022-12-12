@@ -1,7 +1,7 @@
 import { Component , Input, OnInit } from '@angular/core';
-import { Repo } from 'src/app/repos/repos.component';
 import { TimelineService } from 'src/app/services/timeline.service';
 import { faCopy } from '@fortawesome/free-solid-svg-icons';
+import { Repo } from 'src/types/type';
 
 @Component({
   selector: 'app-repo',

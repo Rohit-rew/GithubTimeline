@@ -1,6 +1,6 @@
 import { Component  , Input} from '@angular/core';
 import { RepoService } from 'src/app/services/repo.service';
-import { user } from '../../app/home/home.component';
+import { user } from 'src/types/type';
 
 @Component({
   selector: 'app-user',

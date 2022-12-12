@@ -1,15 +1,7 @@
 import { Component } from '@angular/core';
-import { environment } from 'src/environment/environment.prod';
+import { environment } from 'src/environment/environment';
+import { user } from 'src/types/type';
 
-
-export type user = {
-  avatar_url : string,
-  html_url : string,
-  login : string,
-  id : number,
-  repos_url : string,
-  url : string,
-}
 
 @Component({
   selector: 'app-home',

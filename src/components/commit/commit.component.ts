@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { commit } from 'src/app/timeline/timeline.component';
+import { commit } from 'src/types/type';
 
 @Component({
   selector: 'app-commit',
@@ -38,6 +38,5 @@ export class CommitComponent implements OnInit {
   ngOnInit():void{
     this.date = new Date(this.commit.commit.committer.date).toUTCString()
   }
-  
   
 }

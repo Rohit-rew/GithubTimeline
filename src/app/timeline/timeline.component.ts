@@ -1,31 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environment/environment';
 import { TimelineService } from '../services/timeline.service';
+import { commit } from 'src/types/type';
 
-export type commit = {
-  sha : string,
-  node_id : string,
-  url : string ,
-  commit : {
-    message : string,
-    author : {
-      name : string,
-      email : string,
-      date : string,
-    },
-    committer : {
-      name : string,
-      email : string,
-      date : string
-    }
-  },
-  committer : {
-    avatar_url : string,
-    login : string,
-    url : string,
-  },
-  parents : {sha : string, url : string , html_url : string}[]
-}
 
 @Component({
   selector: 'app-timeline',
