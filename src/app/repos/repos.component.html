@@ -1,7 +1,22 @@
+
+<div class="user_info_container">
+    <div class="user_info w-full shadow">
+        <img class="image" src={{userData.avatar_url}} />
+        <div class="flex flex-col gap-1">
+            <h2 class="name">{{userData.name}}</h2> 
+            <h2 class="username">{{userData.login}}</h2>
+            <h2 class="bio">{{userData.bio}}</h2>
+            <h2 class="location">{{userData.location}}</h2>
+            <h2 class="email">Email : {{userData.email || "NA"}} </h2>
+            <a href={{userData.blog}} target="_blank">
+                <h2 class="blog">Blog : {{userData.blog}}</h2>
+            </a>
+        </div>
+    </div>
+</div>
+
 <div class="min-h-screen repo_container">
- 
     <ng-container *ngFor="let item of repoArray">
         <app-repo [repo]="item"></app-repo>
     </ng-container>
-
 </div>

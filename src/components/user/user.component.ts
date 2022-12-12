@@ -13,8 +13,9 @@ export class UserComponent {
 
   constructor(private repoService : RepoService){}
 
-  setRepoLink(repoLink : string){
-    this.repoService.setRepoUrl(repoLink)
+  setLinks(repoLink : string , userLink : string){
+    this.repoService.setRepoUrl(repoLink);
+    this.repoService.setUserLink(userLink);
   }
 
 }
