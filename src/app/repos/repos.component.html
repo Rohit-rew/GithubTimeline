@@ -19,4 +19,6 @@
     <ng-container *ngFor="let item of repoArray">
         <app-repo [repo]="item"></app-repo>
     </ng-container>
+
+    <div *ngIf="userData.public_repos > 30 && userData.public_repos/30 > currPage" class="w-full h-20 flex justify-center items-center" ><fa-icon class="show_more" (click)="fetchMore(repoUrl)" [icon]="arrow"></fa-icon></div>
 </div>

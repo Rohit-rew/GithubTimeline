@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environment/environment';
 import { RepoService } from '../services/repo.service';
 import { userInfo , Repo } from 'src/types/type';
+import { faArrowAltCircleDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-repos',
@@ -10,6 +11,9 @@ import { userInfo , Repo } from 'src/types/type';
   providers: [RepoService],
 })
 export class ReposComponent implements OnInit {
+
+  arrow = faArrowAltCircleDown;
+  currPage : number = 1
   repoUrl: string = '';
   userUrl: string = '';
   repoArray: Repo[] = [];
@@ -66,6 +70,15 @@ export class ReposComponent implements OnInit {
       console.log(error);
     }
   }
+
+  async fetchMore(url : string) : Promise<void>{
+    this.currPage++;
+    const moreRepo = await fetch(url+`?page=${this.currPage}` , {headers : {
+      "Authorization" : `Bearer ${environment.token}`
+    }})
+    const moreRepo_res =await moreRepo.json()
+    this.repoArray = [...this.repoArray , ...moreRepo_res]
+  } 
 
   ngOnInit(): void {
     this.repoUrl = this.repoService.getRepoUrl();

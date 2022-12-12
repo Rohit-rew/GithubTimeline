@@ -74,6 +74,14 @@
     text-decoration: underline;
 }
 
+.show_more{
+    font-size: 25px;
+    color: #f45b69;
+    cursor: pointer;
+}
+
+
+
 @media only screen and (max-width : 600px) {
     .repo_container{
         padding: 10px 10px ;
