@@ -1,5 +1,8 @@
 .container{
-    padding: 200px;
+    padding: 50px 200px;
+    display: flex;
+    flex-direction:column;
+    gap: 50px;
 }
 
 .timeline_container{
@@ -13,6 +16,14 @@
     font-size: 25px;
     color: #f45b69;
     cursor: pointer;
+}
+
+.repo_headline{
+    place-self: center;
+    align-self: center;
+    justify-self: center;
+    font-size: 50px;
+    color: white;
 }
 
 

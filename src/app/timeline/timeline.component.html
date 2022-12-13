@@ -1,4 +1,7 @@
 <div class="min-h-screen container">
+
+    <h2 class="repo_headline">{{repoName}}</h2>
+
     <div class="timeline_container">
         <ng-container *ngFor="let item of commitArray">
             <app-commit [commit]="item"></app-commit>

@@ -16,6 +16,7 @@ export class TimelineComponent implements OnInit {
   commitArray : commit[] = [];
   commitUrl:string = "";
   page : number = 1;
+  repoName : string = ""
   constructor(private timelineService : TimelineService){}
 
   async fetchCommits(comitUrl : string) : Promise<void>{
@@ -36,7 +37,7 @@ export class TimelineComponent implements OnInit {
         "Authorization" : `Bearer ${environment.token}`
       }})
       const timeline_res = await timeline.json()
-      console.log(timeline_res);
+      this.repoName = timeline_res.full_name
       const commitUrl = (timeline_res.commits_url).replace("{/sha}" , "")
       this.commitUrl = commitUrl;
       this.fetchCommits(commitUrl)
